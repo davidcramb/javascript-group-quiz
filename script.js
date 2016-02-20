@@ -2,7 +2,7 @@ var treeObj = {
   height : "",
   char : ""
 };
-var spacing = " ";
+var spacing = "&nbsp";
 var heightMinus;
 var rptChar;
 var html = document.getElementById("toDom");
@@ -22,7 +22,10 @@ function tree() {
   heightMinus = treeObj.height - 1;
 
   for (var i = 0; i < treeObj.height; i++) {
-console.log(spacing.repeat(heightMinus) + treeObj.char.repeat(rptChar));
+  var treeString = spacing.repeat(heightMinus) + treeObj.char.repeat(rptChar) + "<br>";
+  console.log(treeString)
+
+  html.innerHTML += treeString;
   heightMinus --;
   rptChar = rptChar + 2;
 

@@ -15,16 +15,16 @@ function tree() {
     alert("please enter a character!!");
   }
 
-  treeObj.height = parseInt(height.value)
+  treeObj.height = parseInt(height.value) // 7
   treeObj.char = type.value;
   console.log("tree height:",treeObj.height,"tree char", treeObj.char);
+  rptChar = 1;
+  heightMinus = treeObj.height - 1;
 
   for (var i = 0; i < treeObj.height; i++) {
-  heightMinus = treeObj.height - 1;
-  rptChar = 1;
+console.log(spacing.repeat(heightMinus) + treeObj.char.repeat(rptChar));
   heightMinus --;
   rptChar = rptChar + 2;
-  console.log(spacing.repeat(heightMinus +i) + treeObj.char.repeat(rptChar + i));
 
   };
 };

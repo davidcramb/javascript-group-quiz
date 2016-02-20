@@ -41,3 +41,12 @@ button.addEventListener("click", function() {
 })
 
 <!-- need clear button -->
+var reset = document.getElementById("reset");
+
+reset.addEventListener("click", function() {
+  html.innerHTML = "";
+  var height = document.getElementById("height");
+  height.value = " ";
+  var type = document.getElementById("type");
+  type.value = " ";
+})
